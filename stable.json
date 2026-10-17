@@ -1,11 +1,11 @@
 {
- "version": "0.116",
+ "version": "0.117",
  "channel": "stable",
- "date": "2026-10-17T22:22:23+0200",
- "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.116/ad-cockpit-v0.116.tgz",
- "sha256": "a9e262c058c67402916b078f27e1cf2a5a069c7a05ddc3d5983d2a62c494a462",
- "size": 519631,
- "notes": "## v0.116 — Clients Mac et Windows sur le canal de mises à jour\n- **Client Mac** (`mac/`, Swift AppKit + WKWebView, aucune dépendance) : mode **bureau** (derrière toutes les fenêtres, tous les Spaces, jamais sous la barre de menus ni le Dock) ou fenêtre, **⌃⌥C** pour le faire passer devant, menu « AD » dans la barre (recharger, navigateur, mode, démarrage à la connexion, réglages, mises à jour, journal). Serveur : premier qui répond parmi local / JeanClaude LAN / Tailscale. Compilé et installé par `updater.py postinstall` (Command Line Tools) ou `sh mac/build.sh --install`.\n- **Client Windows v0.2** : **mises à jour automatiques** depuis le canal (`stable.json` → entrée `windows` : zip + SHA-256), vérification 40 s après le démarrage puis toutes les 6 h, `autoUpdate` = off / notify / install, retour arrière, bouton ⬆ et menu ; installation en une ligne PowerShell (`bootstrap.ps1`).\n- Validé dans la VM Dockur : installation 0.2.0, détection de 0.2.1 sur le canal, téléchargement, empreinte, remplacement et relance en 2 s.\n- `release.py publish` publie aussi le zip Windows et `bootstrap.ps1` (GitHub + miroir artisan-digital.eu) ; manifeste multi-plateforme ; archive **reproductible** (mêmes octets pour un même arbre) → un numéro publié sur stable et bêta partage le même asset.",
+ "date": "2026-10-17T22:45:22+0200",
+ "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.117/ad-cockpit-v0.117.tgz",
+ "sha256": "8a39fdb154891a232c4ea2c9a4c7806fde4b43923d3d5ca0fc684b4e775d3cb8",
+ "size": 986177,
+ "notes": "## v0.117 — Chaque poste est autonome (Mac, Windows) — installable par n'importe qui\n- **Plus aucune dépendance à JeanClaude** : le cockpit web tourne SUR le poste (Mac : launchd, 127.0.0.1:8799 ; Windows : Python embarqué lancé par le client, 127.0.0.1:8799) avec ses propres réglages, comptes et données. Aucune adresse personnelle dans les défauts (Ollama/Jarvis vides ; les postes d'Arnaud les gardent via une migration de config).\n- **Sondes multiplateformes** (`web-cockpit/probes.py`, `sys.py`) : système (CPU/RAM/swap/disques/uptime) sur Linux, Mac (sysctl, vm_stat) et Windows (ctypes) ; météo, réseau (IP publique, VPN, Tailscale, latence), dépôts git, préprod/prod — sans bash, jq ni GNU stat.\n- Serveur web : écoute **127.0.0.1** par défaut sur Mac/Windows (0.0.0.0 sur Linux pour les pairs et la VM) ; `WEB_BIND` / `AD_WEB_BIND` pour changer.\n- **Client Windows 0.3** : embarque `cockpit/` (serveur + scripts), `install.ps1` télécharge Python 3.12 embarqué (~11 Mo, sans admin), `localServer` / `localPort` ; validé dans la VM Dockur (système Windows, météo, préprod, Google/Microsoft prêts à connecter). `google.py` / `msgraph.py` tournent sans `fcntl` (Windows).\n- **Client Mac** : compilé et installé sur le MacBook (macOS 26, Swift 6) ; corrections : `$VER…` avalé par le sh de macOS, sonde serveur en GET (HEAD refusé), serveur local par défaut.",
  "platforms": [
   "linux-native",
   "linux-web",
@@ -14,14 +14,14 @@
   "windows-app"
  ],
  "mac": {
-  "version": "0.116",
+  "version": "0.117",
   "build": "mac/build.sh --install (source dans l'archive)"
  },
  "windows": {
-  "version": "0.2.1",
-  "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.116/ad-cockpit-win-v0.2.1.zip",
-  "sha256": "20d06ceed16264d49fdf507efc0e86fefac8e76b989f25693a9ec5b278fca061",
-  "size": 464257,
-  "notes": "## v0.116 — Clients Mac et Windows sur le canal de mises à jour\n- **Client Mac** (`mac/`, Swift AppKit + WKWebView, aucune dépendance) : mode **bureau** (derrière toutes les fenêtres, tous les Spaces, jamais sous la barre de menus ni le Dock) ou fenêtre, **⌃⌥C** pour le faire passer devant, menu « AD » dans la barre (recharger, navigateur, mode, démarrage à la connexion, réglages, mises à jour, journal). Serveur : premier qui répond parmi local / JeanClaude LAN / Tailscale. Compilé et installé par `updater.py postinstall` (Command Line Tools) ou `sh mac/build.sh --install`.\n- **Client Windows v0.2** : **mises à jour automatiques** depuis le canal (`stable.json` → entrée `windows` : zip + SHA-256), vérification 40 s après le démarrage puis toutes les 6 h, `autoUpdate` = off / notify / install, retour arrière, bouton ⬆ et menu ; installation en une ligne PowerShell (`bootstrap.ps1`).\n- Validé dans la VM Dockur : installation 0.2.0, détection de 0.2.1 sur le canal, téléchargement, empreinte, remplacement et relance en 2 s.\n- `release.py publish` publie aussi le zip Windows et `bootstrap.ps1` (GitHub + miroir artisan-digital.eu) ; manifeste multi-plateforme ; archive **reproductible** (mêmes octets pour un même arbre) → un numéro publié sur stable et bêta partage le même asset."
+  "version": "0.3.0",
+  "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.117/ad-cockpit-win-v0.3.0.zip",
+  "sha256": "d6e84ed41f4f9e5a123c4dc7e9e950bdd71b7c82399f1770194ce1bfce03714e",
+  "size": 726957,
+  "notes": "## v0.117 — Chaque poste est autonome (Mac, Windows) — installable par n'importe qui\n- **Plus aucune dépendance à JeanClaude** : le cockpit web tourne SUR le poste (Mac : launchd, 127.0.0.1:8799 ; Windows : Python embarqué lancé par le client, 127.0.0.1:8799) avec ses propres réglages, comptes et données. Aucune adresse personnelle dans les défauts (Ollama/Jarvis vides ; les postes d'Arnaud les gardent via une migration de config).\n- **Sondes multiplateformes** (`web-cockpit/probes.py`, `sys.py`) : système (CPU/RAM/swap/disques/uptime) sur Linux, Mac (sysctl, vm_stat) et Windows (ctypes) ; météo, réseau (IP publique, VPN, Tailscale, latence), dépôts git, préprod/prod — sans bash, jq ni GNU stat.\n- Serveur web : écoute **127.0.0.1** par défaut sur Mac/Windows (0.0.0.0 sur Linux pour les pairs et la VM) ; `WEB_BIND` / `AD_WEB_BIND` pour changer.\n- **Client Windows 0.3** : embarque `cockpit/` (serveur + scripts), `install.ps1` télécharge Python 3.12 embarqué (~11 Mo, sans admin), `localServer` / `localPort` ; validé dans la VM Dockur (système Windows, météo, préprod, Google/Microsoft prêts à connecter). `google.py` / `msgraph.py` tournent sans `fcntl` (Windows).\n- **Client Mac** : compilé et installé sur le MacBook (macOS 26, Swift 6) ; corrections : `$VER…` avalé par le sh de macOS, sonde serveur en GET (HEAD refusé), serveur local par défaut."
  }
 }
