@@ -28,7 +28,7 @@ Expand-Archive -Path $zip -DestinationPath $tmp -Force
 # serveur du cockpit : AD_SERVER_URL écrase le modèle de config livré (seulement à la première installation)
 $cfgModel = Join-Path $tmp 'config.json'
 if ($env:AD_SERVER_URL -and (Test-Path $cfgModel) -and -not (Test-Path (Join-Path $env:APPDATA 'ad-cockpit\config.json'))) {
-  $j = Get-Content $cfgModel -Raw | ConvertFrom-Json
+  $j = Get-Content $cfgModel -Raw -Encoding UTF8 | ConvertFrom-Json
   $j.serverUrl = $env:AD_SERVER_URL
   if ($env:AD_UPDATE_CHANNEL) { $j | Add-Member -NotePropertyName updateChannel -NotePropertyValue $chan -Force }
   if ($env:AD_UPDATE_TOKEN) { $j | Add-Member -NotePropertyName updateToken -NotePropertyValue $env:AD_UPDATE_TOKEN -Force }
