@@ -1,10 +1,10 @@
 {
  "version": "0.116",
  "channel": "beta",
- "date": "2026-10-17T22:17:00+0200",
+ "date": "2026-10-17T22:17:52+0200",
  "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.116/ad-cockpit-v0.116.tgz",
- "sha256": "e5e7364f5f0f007b8d6f313ab19c934ba542aeec7ef1d001bebe750bdea52463",
- "size": 992481,
+ "sha256": "d13413901730ec2bc7afb1822480641e087597af79d54c18174d7d88bacc4e85",
+ "size": 519527,
  "notes": "## v0.116 — Clients Mac et Windows sur le canal de mises à jour\n- **Client Mac** (`mac/`, Swift AppKit + WKWebView, aucune dépendance) : mode **bureau** (derrière toutes les fenêtres, tous les Spaces, jamais sous la barre de menus ni le Dock) ou fenêtre, **⌃⌥C** pour le faire passer devant, menu « AD » dans la barre (recharger, navigateur, mode, démarrage à la connexion, réglages, mises à jour, journal). Serveur : premier qui répond parmi local / JeanClaude LAN / Tailscale. Compilé et installé par `updater.py postinstall` (Command Line Tools) ou `sh mac/build.sh --install`.\n- **Client Windows v0.2** : **mises à jour automatiques** depuis le canal (`stable.json` → entrée `windows` : zip + SHA-256), vérification 40 s après le démarrage puis toutes les 6 h, `autoUpdate` = off / notify / install, retour arrière, bouton ⬆ et menu ; installation en une ligne PowerShell (`bootstrap.ps1`).\n- `release.py publish` publie aussi le zip Windows et `bootstrap.ps1` (GitHub + miroir artisan-digital.eu) ; manifeste multi-plateforme.",
  "platforms": [
   "linux-native",
