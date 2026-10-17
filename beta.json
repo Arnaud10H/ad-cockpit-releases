@@ -1,11 +1,11 @@
 {
- "version": "0.119",
+ "version": "0.120",
  "channel": "beta",
- "date": "2026-10-17T23:07:30+0200",
- "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.119/ad-cockpit-v0.119.tgz",
- "sha256": "0e45304e2e8dc05f00be1c467cd63f5b70aa6d1f6e4ffc7f9a445884c1e55daf",
- "size": 993124,
- "notes": "## v0.119 — Mac cliquable, carte Contrôles, comptes sur le Mac\n- **Client Mac** : la fenêtre « bureau » se place au-dessus de la couche des icônes du Finder (qui avalait tous les clics) → tout est cliquable ; premier clic pris en compte même fenêtre inactive.\n- **Carte Contrôles** (cockpit web, toutes plateformes, `web-cockpit/controls.py`) : Mac → Wi-Fi, mode sombre, silence, volume ±, verrouiller, veille, afficher le bureau, vider la corbeille ; Windows → mode sombre, silence, verrouiller, veille, corbeille ; Linux → dictée, Dockur, filtre nuit, fond d'écran, audio, mise à jour système ; partout → mettre à jour / relancer le cockpit.\n- Tubely accepte d'être embarqué par un cockpit local (`frame-ancestors 'self' http://localhost:* http://127.0.0.1:*`).",
+ "date": "2026-10-17T23:11:15+0200",
+ "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.120/ad-cockpit-v0.120.tgz",
+ "sha256": "e7179344739ed9f8b34eaa2c743140cdee81cfb76ae82ac4dad6aa10c8d0fe52",
+ "size": 994652,
+ "notes": "## v0.120 — Mac : fenêtre translucide, marge, une fenêtre par écran\n- **Client Mac** : fenêtre bureau avec **marge** (`gap`, 14 px), **coins arrondis** (`radius`), **fond translucide** façon Hyprland (papier peint flouté derrière, voile sombre réglable `opacity`, `blur`), **une fenêtre par écran** (`allScreens`) reconstruites quand on branche/débranche un écran ; le cockpit web passe en fond transparent quand il est embarqué dans le client Mac (`data-client=mac`).",
  "platforms": [
   "linux-native",
   "linux-web",
@@ -14,14 +14,14 @@
   "windows-app"
  ],
  "mac": {
-  "version": "0.119",
+  "version": "0.120",
   "build": "mac/build.sh --install (source dans l'archive)"
  },
  "windows": {
   "version": "0.3.1",
-  "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.119/ad-cockpit-win-v0.3.1.zip",
-  "sha256": "6c1c3501750761257348f833dddff59d09190ad3941f5f6718a16e0035d55f4a",
-  "size": 733220,
-  "notes": "## v0.119 — Mac cliquable, carte Contrôles, comptes sur le Mac\n- **Client Mac** : la fenêtre « bureau » se place au-dessus de la couche des icônes du Finder (qui avalait tous les clics) → tout est cliquable ; premier clic pris en compte même fenêtre inactive.\n- **Carte Contrôles** (cockpit web, toutes plateformes, `web-cockpit/controls.py`) : Mac → Wi-Fi, mode sombre, silence, volume ±, verrouiller, veille, afficher le bureau, vider la corbeille ; Windows → mode sombre, silence, verrouiller, veille, corbeille ; Linux → dictée, Dockur, filtre nuit, fond d'écran, audio, mise à jour système ; partout → mettre à jour / relancer le cockpit.\n- Tubely accepte d'être embarqué par un cockpit local (`frame-ancestors 'self' http://localhost:* http://127.0.0.1:*`)."
+  "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.120/ad-cockpit-win-v0.3.1.zip",
+  "sha256": "ab5226d4f8d6a8945c753861c9078249718c577ae7c0f1033884d804f5ff0dce",
+  "size": 733575,
+  "notes": "## v0.120 — Mac : fenêtre translucide, marge, une fenêtre par écran\n- **Client Mac** : fenêtre bureau avec **marge** (`gap`, 14 px), **coins arrondis** (`radius`), **fond translucide** façon Hyprland (papier peint flouté derrière, voile sombre réglable `opacity`, `blur`), **une fenêtre par écran** (`allScreens`) reconstruites quand on branche/débranche un écran ; le cockpit web passe en fond transparent quand il est embarqué dans le client Mac (`data-client=mac`)."
  }
 }
