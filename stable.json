@@ -1,0 +1,27 @@
+{
+ "version": "0.116",
+ "channel": "stable",
+ "date": "2026-10-17T22:12:33+0200",
+ "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.116/ad-cockpit-v0.116.tgz",
+ "sha256": "898bbb6e7bbe60a3fedc8af8ff9e681be331b5170538f51affb92e8f0d90e38a",
+ "size": 991552,
+ "notes": "## v0.116 — Clients Mac et Windows sur le canal de mises à jour\n- **Client Mac** (`mac/`, Swift AppKit + WKWebView, aucune dépendance) : mode **bureau** (derrière toutes les fenêtres, tous les Spaces, jamais sous la barre de menus ni le Dock) ou fenêtre, **⌃⌥C** pour le faire passer devant, menu « AD » dans la barre (recharger, navigateur, mode, démarrage à la connexion, réglages, mises à jour, journal). Serveur : premier qui répond parmi local / JeanClaude LAN / Tailscale. Compilé et installé par `updater.py postinstall` (Command Line Tools) ou `sh mac/build.sh --install`.\n- **Client Windows v0.2** : **mises à jour automatiques** depuis le canal (`stable.json` → entrée `windows` : zip + SHA-256), vérification 40 s après le démarrage puis toutes les 6 h, `autoUpdate` = off / notify / install, retour arrière, bouton ⬆ et menu ; installation en une ligne PowerShell (`bootstrap.ps1`).\n- `release.py publish` publie aussi le zip Windows et `bootstrap.ps1` (GitHub + miroir artisan-digital.eu) ; manifeste multi-plateforme.",
+ "platforms": [
+  "linux-native",
+  "linux-web",
+  "macos-app",
+  "macos-web",
+  "windows-app"
+ ],
+ "mac": {
+  "version": "0.116",
+  "build": "mac/build.sh --install (source dans l'archive)"
+ },
+ "windows": {
+  "version": "0.2.0",
+  "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.116/ad-cockpit-win-v0.2.0.zip",
+  "sha256": "3d29285cf368c056ad2626dd4d2a89827a61c729881479c8c91d72df9eddb815",
+  "size": 463589,
+  "notes": "## v0.116 — Clients Mac et Windows sur le canal de mises à jour\n- **Client Mac** (`mac/`, Swift AppKit + WKWebView, aucune dépendance) : mode **bureau** (derrière toutes les fenêtres, tous les Spaces, jamais sous la barre de menus ni le Dock) ou fenêtre, **⌃⌥C** pour le faire passer devant, menu « AD » dans la barre (recharger, navigateur, mode, démarrage à la connexion, réglages, mises à jour, journal). Serveur : premier qui répond parmi local / JeanClaude LAN / Tailscale. Compilé et installé par `updater.py postinstall` (Command Line Tools) ou `sh mac/build.sh --install`.\n- **Client Windows v0.2** : **mises à jour automatiques** depuis le canal (`stable.json` → entrée `windows` : zip + SHA-256), vérification 40 s après le démarrage puis toutes les 6 h, `autoUpdate` = off / notify / install, retour arrière, bouton ⬆ et menu ; installation en une ligne PowerShell (`bootstrap.ps1`).\n- `release.py publish` publie aussi le zip Windows et `bootstrap.ps1` (GitHub + miroir artisan-digital.eu) ; manifeste multi-plateforme."
+ }
+}
