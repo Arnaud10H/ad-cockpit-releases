@@ -1,11 +1,11 @@
 {
- "version": "0.118",
+ "version": "0.119",
  "channel": "beta",
- "date": "2026-10-17T22:59:53+0200",
- "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.118/ad-cockpit-v0.118.tgz",
- "sha256": "5bcd9593a4e95bd7f249dad48efcd69876fa8084096ae80c07e8bb1ef2f723ea",
- "size": 988998,
- "notes": "## v0.118 — Mac utile : lanceurs macOS, cartes adaptées au poste\n- **Vue Icônes sur Mac** : applications de /Applications, /System/Applications (+ Utilitaires, ~/Applications) avec leurs **vraies icônes** (.icns → PNG, cache), **Favoris = le Dock**, catégories (Internet, Bureautique, Développement, Multimédia…) d'après `LSApplicationCategoryType` ; clic = `open -a`. Dossiers/fichiers/URL ouverts par `open` (Windows : `os.startfile`).\n- **Cartes selon les capacités du poste** (`api/features` : docker, systemd, os) : sans Docker → cartes Docker/Dockur masquées ; sans systemd → Serveurs/Timers/Routines masqués (hors mode édition).\n- Client Mac : `AD_SNAPSHOT=/chemin.png` capture la page 8 s après chargement puis quitte (auto-test à distance, comme `--selftest` sur Windows). Bureau macOS protégé (TCC) ignoré proprement.",
+ "date": "2026-10-17T23:07:30+0200",
+ "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.119/ad-cockpit-v0.119.tgz",
+ "sha256": "0e45304e2e8dc05f00be1c467cd63f5b70aa6d1f6e4ffc7f9a445884c1e55daf",
+ "size": 993124,
+ "notes": "## v0.119 — Mac cliquable, carte Contrôles, comptes sur le Mac\n- **Client Mac** : la fenêtre « bureau » se place au-dessus de la couche des icônes du Finder (qui avalait tous les clics) → tout est cliquable ; premier clic pris en compte même fenêtre inactive.\n- **Carte Contrôles** (cockpit web, toutes plateformes, `web-cockpit/controls.py`) : Mac → Wi-Fi, mode sombre, silence, volume ±, verrouiller, veille, afficher le bureau, vider la corbeille ; Windows → mode sombre, silence, verrouiller, veille, corbeille ; Linux → dictée, Dockur, filtre nuit, fond d'écran, audio, mise à jour système ; partout → mettre à jour / relancer le cockpit.\n- Tubely accepte d'être embarqué par un cockpit local (`frame-ancestors 'self' http://localhost:* http://127.0.0.1:*`).",
  "platforms": [
   "linux-native",
   "linux-web",
@@ -14,14 +14,14 @@
   "windows-app"
  ],
  "mac": {
-  "version": "0.118",
+  "version": "0.119",
   "build": "mac/build.sh --install (source dans l'archive)"
  },
  "windows": {
   "version": "0.3.1",
-  "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.118/ad-cockpit-win-v0.3.1.zip",
-  "sha256": "3e527b2b60b95cb59b4460b7c961abd3aaa71c234a275f518d4df43f0d20b915",
-  "size": 729005,
-  "notes": "## v0.118 — Mac utile : lanceurs macOS, cartes adaptées au poste\n- **Vue Icônes sur Mac** : applications de /Applications, /System/Applications (+ Utilitaires, ~/Applications) avec leurs **vraies icônes** (.icns → PNG, cache), **Favoris = le Dock**, catégories (Internet, Bureautique, Développement, Multimédia…) d'après `LSApplicationCategoryType` ; clic = `open -a`. Dossiers/fichiers/URL ouverts par `open` (Windows : `os.startfile`).\n- **Cartes selon les capacités du poste** (`api/features` : docker, systemd, os) : sans Docker → cartes Docker/Dockur masquées ; sans systemd → Serveurs/Timers/Routines masqués (hors mode édition).\n- Client Mac : `AD_SNAPSHOT=/chemin.png` capture la page 8 s après chargement puis quitte (auto-test à distance, comme `--selftest` sur Windows). Bureau macOS protégé (TCC) ignoré proprement."
+  "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.119/ad-cockpit-win-v0.3.1.zip",
+  "sha256": "6c1c3501750761257348f833dddff59d09190ad3941f5f6718a16e0035d55f4a",
+  "size": 733220,
+  "notes": "## v0.119 — Mac cliquable, carte Contrôles, comptes sur le Mac\n- **Client Mac** : la fenêtre « bureau » se place au-dessus de la couche des icônes du Finder (qui avalait tous les clics) → tout est cliquable ; premier clic pris en compte même fenêtre inactive.\n- **Carte Contrôles** (cockpit web, toutes plateformes, `web-cockpit/controls.py`) : Mac → Wi-Fi, mode sombre, silence, volume ±, verrouiller, veille, afficher le bureau, vider la corbeille ; Windows → mode sombre, silence, verrouiller, veille, corbeille ; Linux → dictée, Dockur, filtre nuit, fond d'écran, audio, mise à jour système ; partout → mettre à jour / relancer le cockpit.\n- Tubely accepte d'être embarqué par un cockpit local (`frame-ancestors 'self' http://localhost:* http://127.0.0.1:*`)."
  }
 }
