@@ -1,11 +1,11 @@
 {
- "version": "0.117",
+ "version": "0.118",
  "channel": "stable",
- "date": "2026-10-17T22:47:49+0200",
- "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.117/ad-cockpit-v0.117.tgz",
- "sha256": "f05ea4f04169990b1753c8a728e6359d7732b243fa3ef27c0820bacb67206930",
- "size": 986345,
- "notes": "## v0.117 — Chaque poste est autonome (Mac, Windows) — installable par n'importe qui\n- **Plus aucune dépendance à JeanClaude** : le cockpit web tourne SUR le poste (Mac : launchd, 127.0.0.1:8799 ; Windows : Python embarqué lancé par le client, 127.0.0.1:8799) avec ses propres réglages, comptes et données. Aucune adresse personnelle dans les défauts (Ollama/Jarvis vides ; les postes d'Arnaud les gardent via une migration de config).\n- **Sondes multiplateformes** (`web-cockpit/probes.py`, `sys.py`) : système (CPU/RAM/swap/disques/uptime) sur Linux, Mac (sysctl, vm_stat) et Windows (ctypes) ; météo, réseau (IP publique, VPN, Tailscale, latence), dépôts git, préprod/prod — sans bash, jq ni GNU stat.\n- Serveur web : écoute **127.0.0.1** par défaut sur Mac/Windows (0.0.0.0 sur Linux pour les pairs et la VM) ; `WEB_BIND` / `AD_WEB_BIND` pour changer.\n- **Client Windows 0.3.1** : embarque `cockpit/` (serveur + scripts), `install.ps1` télécharge Python 3.12 embarqué (~11 Mo, sans admin), `localServer` / `localPort` ; validé dans la VM Dockur (système Windows, météo, préprod, Google/Microsoft prêts à connecter). `google.py` / `msgraph.py` tournent sans `fcntl` (Windows).\n- **Client Mac** : compilé et installé sur le MacBook (macOS 26, Swift 6) ; corrections : `$VER…` avalé par le sh de macOS, sonde serveur en GET (HEAD refusé), serveur local par défaut.",
+ "date": "2026-10-17T23:00:16+0200",
+ "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.118/ad-cockpit-v0.118.tgz",
+ "sha256": "5bcd9593a4e95bd7f249dad48efcd69876fa8084096ae80c07e8bb1ef2f723ea",
+ "size": 988998,
+ "notes": "## v0.118 — Mac utile : lanceurs macOS, cartes adaptées au poste\n- **Vue Icônes sur Mac** : applications de /Applications, /System/Applications (+ Utilitaires, ~/Applications) avec leurs **vraies icônes** (.icns → PNG, cache), **Favoris = le Dock**, catégories (Internet, Bureautique, Développement, Multimédia…) d'après `LSApplicationCategoryType` ; clic = `open -a`. Dossiers/fichiers/URL ouverts par `open` (Windows : `os.startfile`).\n- **Cartes selon les capacités du poste** (`api/features` : docker, systemd, os) : sans Docker → cartes Docker/Dockur masquées ; sans systemd → Serveurs/Timers/Routines masqués (hors mode édition).\n- Client Mac : `AD_SNAPSHOT=/chemin.png` capture la page 8 s après chargement puis quitte (auto-test à distance, comme `--selftest` sur Windows). Bureau macOS protégé (TCC) ignoré proprement.",
  "platforms": [
   "linux-native",
   "linux-web",
@@ -14,14 +14,14 @@
   "windows-app"
  ],
  "mac": {
-  "version": "0.117",
+  "version": "0.118",
   "build": "mac/build.sh --install (source dans l'archive)"
  },
  "windows": {
   "version": "0.3.1",
-  "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.117/ad-cockpit-win-v0.3.1.zip",
-  "sha256": "1333e36792b855911ed396cd25422529d25a83e5f0beb81378f57c4ca6fd03b1",
-  "size": 727122,
-  "notes": "## v0.117 — Chaque poste est autonome (Mac, Windows) — installable par n'importe qui\n- **Plus aucune dépendance à JeanClaude** : le cockpit web tourne SUR le poste (Mac : launchd, 127.0.0.1:8799 ; Windows : Python embarqué lancé par le client, 127.0.0.1:8799) avec ses propres réglages, comptes et données. Aucune adresse personnelle dans les défauts (Ollama/Jarvis vides ; les postes d'Arnaud les gardent via une migration de config).\n- **Sondes multiplateformes** (`web-cockpit/probes.py`, `sys.py`) : système (CPU/RAM/swap/disques/uptime) sur Linux, Mac (sysctl, vm_stat) et Windows (ctypes) ; météo, réseau (IP publique, VPN, Tailscale, latence), dépôts git, préprod/prod — sans bash, jq ni GNU stat.\n- Serveur web : écoute **127.0.0.1** par défaut sur Mac/Windows (0.0.0.0 sur Linux pour les pairs et la VM) ; `WEB_BIND` / `AD_WEB_BIND` pour changer.\n- **Client Windows 0.3.1** : embarque `cockpit/` (serveur + scripts), `install.ps1` télécharge Python 3.12 embarqué (~11 Mo, sans admin), `localServer` / `localPort` ; validé dans la VM Dockur (système Windows, météo, préprod, Google/Microsoft prêts à connecter). `google.py` / `msgraph.py` tournent sans `fcntl` (Windows).\n- **Client Mac** : compilé et installé sur le MacBook (macOS 26, Swift 6) ; corrections : `$VER…` avalé par le sh de macOS, sonde serveur en GET (HEAD refusé), serveur local par défaut."
+  "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.118/ad-cockpit-win-v0.3.1.zip",
+  "sha256": "3e527b2b60b95cb59b4460b7c961abd3aaa71c234a275f518d4df43f0d20b915",
+  "size": 729005,
+  "notes": "## v0.118 — Mac utile : lanceurs macOS, cartes adaptées au poste\n- **Vue Icônes sur Mac** : applications de /Applications, /System/Applications (+ Utilitaires, ~/Applications) avec leurs **vraies icônes** (.icns → PNG, cache), **Favoris = le Dock**, catégories (Internet, Bureautique, Développement, Multimédia…) d'après `LSApplicationCategoryType` ; clic = `open -a`. Dossiers/fichiers/URL ouverts par `open` (Windows : `os.startfile`).\n- **Cartes selon les capacités du poste** (`api/features` : docker, systemd, os) : sans Docker → cartes Docker/Dockur masquées ; sans systemd → Serveurs/Timers/Routines masqués (hors mode édition).\n- Client Mac : `AD_SNAPSHOT=/chemin.png` capture la page 8 s après chargement puis quitte (auto-test à distance, comme `--selftest` sur Windows). Bureau macOS protégé (TCC) ignoré proprement."
  }
 }
