@@ -1,11 +1,11 @@
 {
- "version": "0.124",
+ "version": "0.125",
  "channel": "beta",
- "date": "2026-10-18T11:00:52+0200",
- "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.124/ad-cockpit-v0.124.tgz",
- "sha256": "578ea3f94c9f7b2f9af8d68be697e5e152dd26e49f01f4f318890b2cf0a4a609",
- "size": 1011367,
- "notes": "## v0.124 — Notifications système et raccourcis d'écran (Linux · Mac · Windows)\n- **Notifications système** (`web-cockpit/notify.py` : notify-send / `osascript` / toast Windows) envoyées par le serveur web local, donc identiques sur les trois postes : **rappel N minutes avant un rendez-vous** (agenda Google, hors journée entière et hors mineurs) et **bilan quotidien** des tâches **en retard / du jour** (Google Tasks, Planner, To Do — listes « Flagged Emails » ignorées). Réglages ⚙ → *Notifications & raccourcis* : minutes avant (0 = jamais), heure du bilan (-1 = jamais), bouton **Tester**. `updater.py` passe aussi par `notify.py` (toast Windows pour les mises à jour).\n- **Raccourcis clavier dans la page** (tous postes) : **Alt+1…9** = écran (▦ Tableau, ✓ Tâches, ⊞ Icônes, 📅 Agenda, 🤖 IA, 📰 Info, ▶ Tubely, 🌐 App, 📡 RSS, puis les profils), **Alt+← / →** = écran précédent / suivant, **Alt+E** = édition, **Alt+,** = réglages. Un toast indique l'écran choisi.\n- **Mac : raccourcis globaux** ⌃⌥1…9 et ⌃⌥← / → (Carbon, sans permission Accessibilité) qui changent d'écran **sans amener le cockpit devant** ; sous-menu **Écran** dans le menu « AD ».\n- **Windows (client 0.3.2)** : la mise à jour se déclenche aussi quand seul le **cockpit embarqué** (scripts, page web) change, plus seulement l'exe ; `release.py` reconstruit le zip Windows à chaque publication avec le cockpit courant. Client **0.3.3** : arrête un ancien serveur python du cockpit resté en vie avant de lancer le sien (sinon l'ancien gardait le port 8799 et les nouvelles routes manquaient) ; `server.py` refuse de se lier à un port déjà pris sous Windows.",
+ "date": "2026-10-18T11:43:30+0200",
+ "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.125/ad-cockpit-v0.125.tgz",
+ "sha256": "e0842caa1f77bb475bae3747175bc759f555cabcc2ae7cfcb56b9b197fb8de22",
+ "size": 1017053,
+ "notes": "## v0.125 — Jarvis en mode texte (dictée Mac / Windows) · fond d'écran Mac / Windows\n- **🎙 Jarvis sur Mac et Windows** : nouvelle carte **Jarvis** (catégorie Système) avec un champ : on dicte avec la dictée du poste (**macOS : touche 🎤 ou Fn Fn** dans le champ ; **Windows : Win+H**) ou on tape, Entrée (ou envoi auto 2,5 s après la fin de la dictée) → le cerveau ad-jarvis de JeanClaude (`JARVIS_URL`) répond, **la réponse est lue à voix haute** (voix piper relayée, ⚙ `JARVIS_TTS`) et les actions sont exécutées sur le poste : volume (niveau / plus / moins / muet), lecteur média, lancer une appli / une adresse, minuteur et rappel (notification), nouvelle tâche Google, changer d'écran (« vue tâches »…), fond d'écran, réglages, mise à jour. Les actions Linux (serveurs, dictée système, frappe) répondent « pas sur ce poste ». Le bouton flottant 🎙 et l'épinglé « Jarvis » ouvrent la carte et mettent le focus dans le champ.\n- **Fond d'écran suivant sur Mac et Windows** (`controls.py wallpaper`) : image au hasard dans `WALLPAPER_DIR` (⚙), sinon `~/.config/ad-cockpit/wallpapers.dir`, sinon `~/Pictures/Wallpapers` — bouton dans la carte Contrôles, épinglé 🖼 du menu ⋯ et commande Jarvis « fond d'écran suivant ». Mac : tous les bureaux (System Events) ; Windows : jpg/png/bmp.\n- `controls.py volume N` (niveau exact) sur les trois plateformes ; `controls.py volume` lit le niveau.",
  "platforms": [
   "linux-native",
   "linux-web",
@@ -14,14 +14,14 @@
   "windows-app"
  ],
  "mac": {
-  "version": "0.124",
+  "version": "0.125",
   "build": "mac/build.sh --install (source dans l'archive)"
  },
  "windows": {
   "version": "0.3.3",
-  "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.124/ad-cockpit-win-v0.3.3.zip",
-  "sha256": "20893c892eb4a4ad8026c6bdf0ab33258c5ad744db269988d24daeacc68d2e38",
-  "size": 747527,
-  "notes": "## v0.124 — Notifications système et raccourcis d'écran (Linux · Mac · Windows)\n- **Notifications système** (`web-cockpit/notify.py` : notify-send / `osascript` / toast Windows) envoyées par le serveur web local, donc identiques sur les trois postes : **rappel N minutes avant un rendez-vous** (agenda Google, hors journée entière et hors mineurs) et **bilan quotidien** des tâches **en retard / du jour** (Google Tasks, Planner, To Do — listes « Flagged Emails » ignorées). Réglages ⚙ → *Notifications & raccourcis* : minutes avant (0 = jamais), heure du bilan (-1 = jamais), bouton **Tester**. `updater.py` passe aussi par `notify.py` (toast Windows pour les mises à jour).\n- **Raccourcis clavier dans la page** (tous postes) : **Alt+1…9** = écran (▦ Tableau, ✓ Tâches, ⊞ Icônes, 📅 Agenda, 🤖 IA, 📰 Info, ▶ Tubely, 🌐 App, 📡 RSS, puis les profils), **Alt+← / →** = écran précédent / suivant, **Alt+E** = édition, **Alt+,** = réglages. Un toast indique l'écran choisi.\n- **Mac : raccourcis globaux** ⌃⌥1…9 et ⌃⌥← / → (Carbon, sans permission Accessibilité) qui changent d'écran **sans amener le cockpit devant** ; sous-menu **Écran** dans le menu « AD ».\n- **Windows (client 0.3.2)** : la mise à jour se déclenche aussi quand seul le **cockpit embarqué** (scripts, page web) change, plus seulement l'exe ; `release.py` reconstruit le zip Windows à chaque publication avec le cockpit courant. Client **0.3.3** : arrête un ancien serveur python du cockpit resté en vie avant de lancer le sien (sinon l'ancien gardait le port 8799 et les nouvelles routes manquaient) ; `server.py` refuse de se lier à un port déjà pris sous Windows."
+  "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.125/ad-cockpit-win-v0.3.3.zip",
+  "sha256": "1e37d81a1c2d9bd9efde768aab486855fe6921a612a5a02a91ab74f66e23a2ee",
+  "size": 753110,
+  "notes": "## v0.125 — Jarvis en mode texte (dictée Mac / Windows) · fond d'écran Mac / Windows\n- **🎙 Jarvis sur Mac et Windows** : nouvelle carte **Jarvis** (catégorie Système) avec un champ : on dicte avec la dictée du poste (**macOS : touche 🎤 ou Fn Fn** dans le champ ; **Windows : Win+H**) ou on tape, Entrée (ou envoi auto 2,5 s après la fin de la dictée) → le cerveau ad-jarvis de JeanClaude (`JARVIS_URL`) répond, **la réponse est lue à voix haute** (voix piper relayée, ⚙ `JARVIS_TTS`) et les actions sont exécutées sur le poste : volume (niveau / plus / moins / muet), lecteur média, lancer une appli / une adresse, minuteur et rappel (notification), nouvelle tâche Google, changer d'écran (« vue tâches »…), fond d'écran, réglages, mise à jour. Les actions Linux (serveurs, dictée système, frappe) répondent « pas sur ce poste ». Le bouton flottant 🎙 et l'épinglé « Jarvis » ouvrent la carte et mettent le focus dans le champ.\n- **Fond d'écran suivant sur Mac et Windows** (`controls.py wallpaper`) : image au hasard dans `WALLPAPER_DIR` (⚙), sinon `~/.config/ad-cockpit/wallpapers.dir`, sinon `~/Pictures/Wallpapers` — bouton dans la carte Contrôles, épinglé 🖼 du menu ⋯ et commande Jarvis « fond d'écran suivant ». Mac : tous les bureaux (System Events) ; Windows : jpg/png/bmp.\n- `controls.py volume N` (niveau exact) sur les trois plateformes ; `controls.py volume` lit le niveau."
  }
 }
