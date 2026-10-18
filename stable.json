@@ -1,11 +1,11 @@
 {
- "version": "0.126",
+ "version": "0.127",
  "channel": "stable",
- "date": "2026-10-18T12:40:31+0200",
- "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.126/ad-cockpit-v0.126.tgz",
- "sha256": "ced67650bcd7de742ec80c701225511eedf3748c9668d65a8f8c4a17b2e98885",
- "size": 1018857,
- "notes": "## v0.126 — Écrans ⌨ Dev · 🎵 Musique · 🎬 Clips, et choix des écrans proposés\n- **⌨ Dev** : Git, préprod, Docker, serveurs, timers, routines, système, contrôles en tête, le reste de tes blocs de côté derrière (sans doublon).\n- **🎵 Musique** et **🎬 Clips** : Tubely plein cadre, lancé directement en **lecture aléatoire** de la section musique (lecteur + liste) ou des clips (**plein écran dans la vue**, enchaînement) — nouvelle route Tubely `#/random/music`, `#/random/video?fill=1` (ou `#/random/<id de section>`).\n- **Choisir les écrans proposés** : en mode édition, bouton **▦ Écrans ▾** (cases à cocher, enregistré aussitôt, partagé entre navigateurs) ; aussi dans ⚙ → Apparence → *Écrans proposés*. Un écran décoché disparaît du sélecteur, du menu ⋯ et des raccourcis Alt+N / ⌃⌥N (dont la numérotation suit l'ordre du sélecteur) ; ▦ Tableau reste toujours.\n- Mac : sous-menu « Écran » du menu AD = Écran 1…9 (même ordre que le sélecteur).",
+ "date": "2026-10-18T12:41:33+0200",
+ "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.127/ad-cockpit-v0.127.tgz",
+ "sha256": "5c3bb123dc0e8920f5214f68315510db7dfde7eb4675406530fc01b80369fceb",
+ "size": 1019236,
+ "notes": "## v0.127 — Colonnes propres à chaque écran\n- Le nombre de colonnes (mode édition) est maintenant **mémorisé par écran** (`WEB_GRIDCOLS_BY`) : 5 colonnes sur le Tableau n'affectent plus ✓ Tâches, ⌨ Dev, etc. Un écran sans réglage garde la valeur générale `WEB_GRIDCOLS` (⚙).",
  "platforms": [
   "linux-native",
   "linux-web",
@@ -14,14 +14,14 @@
   "windows-app"
  ],
  "mac": {
-  "version": "0.126",
+  "version": "0.127",
   "build": "mac/build.sh --install (source dans l'archive)"
  },
  "windows": {
   "version": "0.3.3",
-  "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.126/ad-cockpit-win-v0.3.3.zip",
-  "sha256": "1458fe20a11c9a10e7724830855d52b8809c2f1dd42e85cbfce437f9e43cb7d6",
-  "size": 754740,
-  "notes": "## v0.126 — Écrans ⌨ Dev · 🎵 Musique · 🎬 Clips, et choix des écrans proposés\n- **⌨ Dev** : Git, préprod, Docker, serveurs, timers, routines, système, contrôles en tête, le reste de tes blocs de côté derrière (sans doublon).\n- **🎵 Musique** et **🎬 Clips** : Tubely plein cadre, lancé directement en **lecture aléatoire** de la section musique (lecteur + liste) ou des clips (**plein écran dans la vue**, enchaînement) — nouvelle route Tubely `#/random/music`, `#/random/video?fill=1` (ou `#/random/<id de section>`).\n- **Choisir les écrans proposés** : en mode édition, bouton **▦ Écrans ▾** (cases à cocher, enregistré aussitôt, partagé entre navigateurs) ; aussi dans ⚙ → Apparence → *Écrans proposés*. Un écran décoché disparaît du sélecteur, du menu ⋯ et des raccourcis Alt+N / ⌃⌥N (dont la numérotation suit l'ordre du sélecteur) ; ▦ Tableau reste toujours.\n- Mac : sous-menu « Écran » du menu AD = Écran 1…9 (même ordre que le sélecteur)."
+  "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.127/ad-cockpit-win-v0.3.3.zip",
+  "sha256": "d7aced712944885c5dc5ab70a4d6cd1dd7509077a98f9c7bd2e7fef0f683511e",
+  "size": 755059,
+  "notes": "## v0.127 — Colonnes propres à chaque écran\n- Le nombre de colonnes (mode édition) est maintenant **mémorisé par écran** (`WEB_GRIDCOLS_BY`) : 5 colonnes sur le Tableau n'affectent plus ✓ Tâches, ⌨ Dev, etc. Un écran sans réglage garde la valeur générale `WEB_GRIDCOLS` (⚙)."
  }
 }
