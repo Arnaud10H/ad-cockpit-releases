@@ -1,11 +1,11 @@
 {
- "version": "0.125",
+ "version": "0.126",
  "channel": "beta",
- "date": "2026-10-18T12:35:00+0200",
- "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.125/ad-cockpit-v0.125.tgz",
- "sha256": "1ddfd62eaf876d0afdd428c29541da42552fa1f044a6ab61ee01644858fe9de4",
- "size": 1017599,
- "notes": "## v0.125 — Jarvis en mode texte (dictée Mac / Windows) · fond d'écran Mac / Windows\n- **🎙 Jarvis sur Mac et Windows** : nouvelle carte **Jarvis** (catégorie Système) avec un champ : on dicte avec la dictée du poste (**macOS : touche 🎤 ou Fn Fn** dans le champ ; **Windows : Win+H**) ou on tape, Entrée (ou envoi auto 2,5 s après la fin de la dictée) → le cerveau ad-jarvis de JeanClaude (`JARVIS_URL`) répond, **la réponse est lue à voix haute** (voix piper relayée, ⚙ `JARVIS_TTS`) et les actions sont exécutées sur le poste : volume (niveau / plus / moins / muet), lecteur média, lancer une appli / une adresse, minuteur et rappel (notification), nouvelle tâche Google, changer d'écran (« vue tâches »…), fond d'écran, réglages, mise à jour. Les actions Linux (serveurs, dictée système, frappe) répondent « pas sur ce poste ». Le bouton flottant 🎙 et l'épinglé « Jarvis » ouvrent la carte et mettent le focus dans le champ.\n- **Fond d'écran suivant sur Mac et Windows** (`controls.py wallpaper`) : image au hasard dans `WALLPAPER_DIR` (⚙), sinon `~/.config/ad-cockpit/wallpapers.dir`, sinon `~/Pictures/Wallpapers` — bouton dans la carte Contrôles, épinglé 🖼 du menu ⋯ et commande Jarvis « fond d'écran suivant ». Mac : tous les bureaux (System Events) ; Windows : jpg/png/bmp.\n- **Jarvis se règle tout seul** : si `JARVIS_URL` est vide, le serveur web sonde `JARVIS_AUTODETECT` (JeanClaude par défaut) au démarrage et remplit `JARVIS_URL` / `OLLAMA_URL` si un ad-jarvis répond. Vide le réglage pour désactiver.\n- `controls.py volume N` (niveau exact) sur les trois plateformes ; `controls.py volume` lit le niveau.",
+ "date": "2026-10-18T12:40:11+0200",
+ "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.126/ad-cockpit-v0.126.tgz",
+ "sha256": "ced67650bcd7de742ec80c701225511eedf3748c9668d65a8f8c4a17b2e98885",
+ "size": 1018857,
+ "notes": "## v0.126 — Écrans ⌨ Dev · 🎵 Musique · 🎬 Clips, et choix des écrans proposés\n- **⌨ Dev** : Git, préprod, Docker, serveurs, timers, routines, système, contrôles en tête, le reste de tes blocs de côté derrière (sans doublon).\n- **🎵 Musique** et **🎬 Clips** : Tubely plein cadre, lancé directement en **lecture aléatoire** de la section musique (lecteur + liste) ou des clips (**plein écran dans la vue**, enchaînement) — nouvelle route Tubely `#/random/music`, `#/random/video?fill=1` (ou `#/random/<id de section>`).\n- **Choisir les écrans proposés** : en mode édition, bouton **▦ Écrans ▾** (cases à cocher, enregistré aussitôt, partagé entre navigateurs) ; aussi dans ⚙ → Apparence → *Écrans proposés*. Un écran décoché disparaît du sélecteur, du menu ⋯ et des raccourcis Alt+N / ⌃⌥N (dont la numérotation suit l'ordre du sélecteur) ; ▦ Tableau reste toujours.\n- Mac : sous-menu « Écran » du menu AD = Écran 1…9 (même ordre que le sélecteur).",
  "platforms": [
   "linux-native",
   "linux-web",
@@ -14,14 +14,14 @@
   "windows-app"
  ],
  "mac": {
-  "version": "0.125",
+  "version": "0.126",
   "build": "mac/build.sh --install (source dans l'archive)"
  },
  "windows": {
   "version": "0.3.3",
-  "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.125/ad-cockpit-win-v0.3.3.zip",
-  "sha256": "269e53bdb420894380054e177db6d041aa6e2cab4f414dcedf47f2f2e2774a9e",
-  "size": 753559,
-  "notes": "## v0.125 — Jarvis en mode texte (dictée Mac / Windows) · fond d'écran Mac / Windows\n- **🎙 Jarvis sur Mac et Windows** : nouvelle carte **Jarvis** (catégorie Système) avec un champ : on dicte avec la dictée du poste (**macOS : touche 🎤 ou Fn Fn** dans le champ ; **Windows : Win+H**) ou on tape, Entrée (ou envoi auto 2,5 s après la fin de la dictée) → le cerveau ad-jarvis de JeanClaude (`JARVIS_URL`) répond, **la réponse est lue à voix haute** (voix piper relayée, ⚙ `JARVIS_TTS`) et les actions sont exécutées sur le poste : volume (niveau / plus / moins / muet), lecteur média, lancer une appli / une adresse, minuteur et rappel (notification), nouvelle tâche Google, changer d'écran (« vue tâches »…), fond d'écran, réglages, mise à jour. Les actions Linux (serveurs, dictée système, frappe) répondent « pas sur ce poste ». Le bouton flottant 🎙 et l'épinglé « Jarvis » ouvrent la carte et mettent le focus dans le champ.\n- **Fond d'écran suivant sur Mac et Windows** (`controls.py wallpaper`) : image au hasard dans `WALLPAPER_DIR` (⚙), sinon `~/.config/ad-cockpit/wallpapers.dir`, sinon `~/Pictures/Wallpapers` — bouton dans la carte Contrôles, épinglé 🖼 du menu ⋯ et commande Jarvis « fond d'écran suivant ». Mac : tous les bureaux (System Events) ; Windows : jpg/png/bmp.\n- **Jarvis se règle tout seul** : si `JARVIS_URL` est vide, le serveur web sonde `JARVIS_AUTODETECT` (JeanClaude par défaut) au démarrage et remplit `JARVIS_URL` / `OLLAMA_URL` si un ad-jarvis répond. Vide le réglage pour désactiver.\n- `controls.py volume N` (niveau exact) sur les trois plateformes ; `controls.py volume` lit le niveau."
+  "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.126/ad-cockpit-win-v0.3.3.zip",
+  "sha256": "4adc7d95c9b7b8e12d65f5b185d59d05c1c8e9e7d21be54c8102fca24d0c94a6",
+  "size": 754740,
+  "notes": "## v0.126 — Écrans ⌨ Dev · 🎵 Musique · 🎬 Clips, et choix des écrans proposés\n- **⌨ Dev** : Git, préprod, Docker, serveurs, timers, routines, système, contrôles en tête, le reste de tes blocs de côté derrière (sans doublon).\n- **🎵 Musique** et **🎬 Clips** : Tubely plein cadre, lancé directement en **lecture aléatoire** de la section musique (lecteur + liste) ou des clips (**plein écran dans la vue**, enchaînement) — nouvelle route Tubely `#/random/music`, `#/random/video?fill=1` (ou `#/random/<id de section>`).\n- **Choisir les écrans proposés** : en mode édition, bouton **▦ Écrans ▾** (cases à cocher, enregistré aussitôt, partagé entre navigateurs) ; aussi dans ⚙ → Apparence → *Écrans proposés*. Un écran décoché disparaît du sélecteur, du menu ⋯ et des raccourcis Alt+N / ⌃⌥N (dont la numérotation suit l'ordre du sélecteur) ; ▦ Tableau reste toujours.\n- Mac : sous-menu « Écran » du menu AD = Écran 1…9 (même ordre que le sélecteur)."
  }
 }
