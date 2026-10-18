@@ -1,10 +1,10 @@
 {
  "version": "0.128",
  "channel": "beta",
- "date": "2026-10-18T12:49:34+0200",
+ "date": "2026-10-18T12:51:40+0200",
  "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.128/ad-cockpit-v0.128.tgz",
- "sha256": "aad4d4d0d468450dfca29a19356931547210b2b1692caa98467d95abdda4ed39",
- "size": 1020325,
+ "sha256": "7f70c82551cb354b93daa75c243e1fa539c3af1397407cfd529386e2f925e9f8",
+ "size": 1020323,
  "notes": "## v0.128 — HUD en bas à droite et menu principal (comme sur Hyprland)\n- Le menu ⋯ quitte l'en-tête : **boutons ronds en bas à droite** — **⋯ Menu principal** (épinglés, filtre, écrans, détail système, profil, tout actualiser, widgets, édition, réglages, mode avancé, **thème clair/sombre, fond d'écran suivant, mettre à jour le cockpit, relancer le cockpit web**), **▦** écran suivant (clic droit : précédent), **🖼** fond d'écran, **🌗** thème, **⚙** réglages, **🎙** Jarvis. Le menu s'ouvre au-dessus des boutons, Ctrl+Espace l'ouvre toujours, `/` filtre.",
  "platforms": [
   "linux-native",
@@ -20,8 +20,8 @@
  "windows": {
   "version": "0.3.3",
   "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.128/ad-cockpit-win-v0.3.3.zip",
-  "sha256": "f66cb5afca40f7c2a30e0254840856ed64063b167f00da47d6b46891efde370d",
-  "size": 756060,
+  "sha256": "27a2f4c18b1d80604f6f41f73f7dfb9bc209c0bb49a9db8a1430f24917b924b2",
+  "size": 756053,
   "notes": "## v0.128 — HUD en bas à droite et menu principal (comme sur Hyprland)\n- Le menu ⋯ quitte l'en-tête : **boutons ronds en bas à droite** — **⋯ Menu principal** (épinglés, filtre, écrans, détail système, profil, tout actualiser, widgets, édition, réglages, mode avancé, **thème clair/sombre, fond d'écran suivant, mettre à jour le cockpit, relancer le cockpit web**), **▦** écran suivant (clic droit : précédent), **🖼** fond d'écran, **🌗** thème, **⚙** réglages, **🎙** Jarvis. Le menu s'ouvre au-dessus des boutons, Ctrl+Espace l'ouvre toujours, `/` filtre."
  }
 }
