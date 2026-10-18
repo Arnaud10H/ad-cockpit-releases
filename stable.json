@@ -1,10 +1,10 @@
 {
  "version": "0.125",
  "channel": "stable",
- "date": "2026-10-18T12:34:08+0200",
+ "date": "2026-10-18T12:35:10+0200",
  "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.125/ad-cockpit-v0.125.tgz",
- "sha256": "84b60f2b683328af5b6f3de3ac48d8f48f43037f935a38e525b8055565b65b3a",
- "size": 1017596,
+ "sha256": "1ddfd62eaf876d0afdd428c29541da42552fa1f044a6ab61ee01644858fe9de4",
+ "size": 1017599,
  "notes": "## v0.125 — Jarvis en mode texte (dictée Mac / Windows) · fond d'écran Mac / Windows\n- **🎙 Jarvis sur Mac et Windows** : nouvelle carte **Jarvis** (catégorie Système) avec un champ : on dicte avec la dictée du poste (**macOS : touche 🎤 ou Fn Fn** dans le champ ; **Windows : Win+H**) ou on tape, Entrée (ou envoi auto 2,5 s après la fin de la dictée) → le cerveau ad-jarvis de JeanClaude (`JARVIS_URL`) répond, **la réponse est lue à voix haute** (voix piper relayée, ⚙ `JARVIS_TTS`) et les actions sont exécutées sur le poste : volume (niveau / plus / moins / muet), lecteur média, lancer une appli / une adresse, minuteur et rappel (notification), nouvelle tâche Google, changer d'écran (« vue tâches »…), fond d'écran, réglages, mise à jour. Les actions Linux (serveurs, dictée système, frappe) répondent « pas sur ce poste ». Le bouton flottant 🎙 et l'épinglé « Jarvis » ouvrent la carte et mettent le focus dans le champ.\n- **Fond d'écran suivant sur Mac et Windows** (`controls.py wallpaper`) : image au hasard dans `WALLPAPER_DIR` (⚙), sinon `~/.config/ad-cockpit/wallpapers.dir`, sinon `~/Pictures/Wallpapers` — bouton dans la carte Contrôles, épinglé 🖼 du menu ⋯ et commande Jarvis « fond d'écran suivant ». Mac : tous les bureaux (System Events) ; Windows : jpg/png/bmp.\n- **Jarvis se règle tout seul** : si `JARVIS_URL` est vide, le serveur web sonde `JARVIS_AUTODETECT` (JeanClaude par défaut) au démarrage et remplit `JARVIS_URL` / `OLLAMA_URL` si un ad-jarvis répond. Vide le réglage pour désactiver.\n- `controls.py volume N` (niveau exact) sur les trois plateformes ; `controls.py volume` lit le niveau.",
  "platforms": [
   "linux-native",
@@ -20,8 +20,8 @@
  "windows": {
   "version": "0.3.3",
   "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.125/ad-cockpit-win-v0.3.3.zip",
-  "sha256": "0a9292149b7b1e1e2d82f99d682a59ad9c0914b9a7ac28c0f76185d5bcb954f7",
-  "size": 753555,
+  "sha256": "81cd915e8112580863c56fceefada262bfb59dd97671eda1a5dc6970b8acb8fc",
+  "size": 753559,
   "notes": "## v0.125 — Jarvis en mode texte (dictée Mac / Windows) · fond d'écran Mac / Windows\n- **🎙 Jarvis sur Mac et Windows** : nouvelle carte **Jarvis** (catégorie Système) avec un champ : on dicte avec la dictée du poste (**macOS : touche 🎤 ou Fn Fn** dans le champ ; **Windows : Win+H**) ou on tape, Entrée (ou envoi auto 2,5 s après la fin de la dictée) → le cerveau ad-jarvis de JeanClaude (`JARVIS_URL`) répond, **la réponse est lue à voix haute** (voix piper relayée, ⚙ `JARVIS_TTS`) et les actions sont exécutées sur le poste : volume (niveau / plus / moins / muet), lecteur média, lancer une appli / une adresse, minuteur et rappel (notification), nouvelle tâche Google, changer d'écran (« vue tâches »…), fond d'écran, réglages, mise à jour. Les actions Linux (serveurs, dictée système, frappe) répondent « pas sur ce poste ». Le bouton flottant 🎙 et l'épinglé « Jarvis » ouvrent la carte et mettent le focus dans le champ.\n- **Fond d'écran suivant sur Mac et Windows** (`controls.py wallpaper`) : image au hasard dans `WALLPAPER_DIR` (⚙), sinon `~/.config/ad-cockpit/wallpapers.dir`, sinon `~/Pictures/Wallpapers` — bouton dans la carte Contrôles, épinglé 🖼 du menu ⋯ et commande Jarvis « fond d'écran suivant ». Mac : tous les bureaux (System Events) ; Windows : jpg/png/bmp.\n- **Jarvis se règle tout seul** : si `JARVIS_URL` est vide, le serveur web sonde `JARVIS_AUTODETECT` (JeanClaude par défaut) au démarrage et remplit `JARVIS_URL` / `OLLAMA_URL` si un ad-jarvis répond. Vide le réglage pour désactiver.\n- `controls.py volume N` (niveau exact) sur les trois plateformes ; `controls.py volume` lit le niveau."
  }
 }
