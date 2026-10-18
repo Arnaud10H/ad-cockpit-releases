@@ -1,11 +1,11 @@
 {
  "version": "0.124",
  "channel": "beta",
- "date": "2026-10-18T10:51:43+0200",
+ "date": "2026-10-18T10:54:39+0200",
  "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.124/ad-cockpit-v0.124.tgz",
- "sha256": "1bdb173227f0ac739ba217dc6aea12e79931bc4abc46527a00f4d27acf10ccbc",
- "size": 1009174,
- "notes": "## v0.124 — Notifications système et raccourcis d'écran (Linux · Mac · Windows)\n- **Notifications système** (`web-cockpit/notify.py` : notify-send / `osascript` / toast Windows) envoyées par le serveur web local, donc identiques sur les trois postes : **rappel N minutes avant un rendez-vous** (agenda Google, hors journée entière et hors mineurs) et **bilan quotidien** des tâches **en retard / du jour** (Google Tasks, Planner, To Do — listes « Flagged Emails » ignorées). Réglages ⚙ → *Notifications & raccourcis* : minutes avant (0 = jamais), heure du bilan (-1 = jamais), bouton **Tester**. `updater.py` passe aussi par `notify.py` (toast Windows pour les mises à jour).\n- **Raccourcis clavier dans la page** (tous postes) : **Alt+1…9** = écran (▦ Tableau, ✓ Tâches, ⊞ Icônes, 📅 Agenda, 🤖 IA, 📰 Info, ▶ Tubely, 🌐 App, 📡 RSS, puis les profils), **Alt+← / →** = écran précédent / suivant, **Alt+E** = édition, **Alt+,** = réglages. Un toast indique l'écran choisi.\n- **Mac : raccourcis globaux** ⌃⌥1…9 et ⌃⌥← / → (Carbon, sans permission Accessibilité) qui changent d'écran **sans amener le cockpit devant** ; sous-menu **Écran** dans le menu « AD ».",
+ "sha256": "481e7b5d7fda0c382f1c7348b6dfa9baeae1a0c3f40fa499f6c6f4c6dd57a891",
+ "size": 1009788,
+ "notes": "## v0.124 — Notifications système et raccourcis d'écran (Linux · Mac · Windows)\n- **Notifications système** (`web-cockpit/notify.py` : notify-send / `osascript` / toast Windows) envoyées par le serveur web local, donc identiques sur les trois postes : **rappel N minutes avant un rendez-vous** (agenda Google, hors journée entière et hors mineurs) et **bilan quotidien** des tâches **en retard / du jour** (Google Tasks, Planner, To Do — listes « Flagged Emails » ignorées). Réglages ⚙ → *Notifications & raccourcis* : minutes avant (0 = jamais), heure du bilan (-1 = jamais), bouton **Tester**. `updater.py` passe aussi par `notify.py` (toast Windows pour les mises à jour).\n- **Raccourcis clavier dans la page** (tous postes) : **Alt+1…9** = écran (▦ Tableau, ✓ Tâches, ⊞ Icônes, 📅 Agenda, 🤖 IA, 📰 Info, ▶ Tubely, 🌐 App, 📡 RSS, puis les profils), **Alt+← / →** = écran précédent / suivant, **Alt+E** = édition, **Alt+,** = réglages. Un toast indique l'écran choisi.\n- **Mac : raccourcis globaux** ⌃⌥1…9 et ⌃⌥← / → (Carbon, sans permission Accessibilité) qui changent d'écran **sans amener le cockpit devant** ; sous-menu **Écran** dans le menu « AD ».\n- **Windows (client 0.3.2)** : la mise à jour se déclenche aussi quand seul le **cockpit embarqué** (scripts, page web) change, plus seulement l'exe ; `release.py` reconstruit le zip Windows à chaque publication avec le cockpit courant.",
  "platforms": [
   "linux-native",
   "linux-web",
@@ -18,10 +18,10 @@
   "build": "mac/build.sh --install (source dans l'archive)"
  },
  "windows": {
-  "version": "0.3.1",
-  "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.124/ad-cockpit-win-v0.3.1.zip",
-  "sha256": "9f1d1c25b7d485bfae93f55433345cc80a9d4b8698d581163cc655f8391f72af",
-  "size": 742129,
-  "notes": "## v0.124 — Notifications système et raccourcis d'écran (Linux · Mac · Windows)\n- **Notifications système** (`web-cockpit/notify.py` : notify-send / `osascript` / toast Windows) envoyées par le serveur web local, donc identiques sur les trois postes : **rappel N minutes avant un rendez-vous** (agenda Google, hors journée entière et hors mineurs) et **bilan quotidien** des tâches **en retard / du jour** (Google Tasks, Planner, To Do — listes « Flagged Emails » ignorées). Réglages ⚙ → *Notifications & raccourcis* : minutes avant (0 = jamais), heure du bilan (-1 = jamais), bouton **Tester**. `updater.py` passe aussi par `notify.py` (toast Windows pour les mises à jour).\n- **Raccourcis clavier dans la page** (tous postes) : **Alt+1…9** = écran (▦ Tableau, ✓ Tâches, ⊞ Icônes, 📅 Agenda, 🤖 IA, 📰 Info, ▶ Tubely, 🌐 App, 📡 RSS, puis les profils), **Alt+← / →** = écran précédent / suivant, **Alt+E** = édition, **Alt+,** = réglages. Un toast indique l'écran choisi.\n- **Mac : raccourcis globaux** ⌃⌥1…9 et ⌃⌥← / → (Carbon, sans permission Accessibilité) qui changent d'écran **sans amener le cockpit devant** ; sous-menu **Écran** dans le menu « AD »."
+  "version": "0.3.2",
+  "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.124/ad-cockpit-win-v0.3.2.zip",
+  "sha256": "3a222fe1a5e9682a58e05f289aeac610bcf60beea7342bb7d2c07de329c0118b",
+  "size": 746662,
+  "notes": "## v0.124 — Notifications système et raccourcis d'écran (Linux · Mac · Windows)\n- **Notifications système** (`web-cockpit/notify.py` : notify-send / `osascript` / toast Windows) envoyées par le serveur web local, donc identiques sur les trois postes : **rappel N minutes avant un rendez-vous** (agenda Google, hors journée entière et hors mineurs) et **bilan quotidien** des tâches **en retard / du jour** (Google Tasks, Planner, To Do — listes « Flagged Emails » ignorées). Réglages ⚙ → *Notifications & raccourcis* : minutes avant (0 = jamais), heure du bilan (-1 = jamais), bouton **Tester**. `updater.py` passe aussi par `notify.py` (toast Windows pour les mises à jour).\n- **Raccourcis clavier dans la page** (tous postes) : **Alt+1…9** = écran (▦ Tableau, ✓ Tâches, ⊞ Icônes, 📅 Agenda, 🤖 IA, 📰 Info, ▶ Tubely, 🌐 App, 📡 RSS, puis les profils), **Alt+← / →** = écran précédent / suivant, **Alt+E** = édition, **Alt+,** = réglages. Un toast indique l'écran choisi.\n- **Mac : raccourcis globaux** ⌃⌥1…9 et ⌃⌥← / → (Carbon, sans permission Accessibilité) qui changent d'écran **sans amener le cockpit devant** ; sous-menu **Écran** dans le menu « AD ».\n- **Windows (client 0.3.2)** : la mise à jour se déclenche aussi quand seul le **cockpit embarqué** (scripts, page web) change, plus seulement l'exe ; `release.py` reconstruit le zip Windows à chaque publication avec le cockpit courant."
  }
 }
