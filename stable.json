@@ -1,11 +1,11 @@
 {
- "version": "0.127",
+ "version": "0.128",
  "channel": "stable",
- "date": "2026-10-18T12:41:33+0200",
- "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.127/ad-cockpit-v0.127.tgz",
- "sha256": "5c3bb123dc0e8920f5214f68315510db7dfde7eb4675406530fc01b80369fceb",
- "size": 1019236,
- "notes": "## v0.127 — Colonnes propres à chaque écran\n- Le nombre de colonnes (mode édition) est maintenant **mémorisé par écran** (`WEB_GRIDCOLS_BY`) : 5 colonnes sur le Tableau n'affectent plus ✓ Tâches, ⌨ Dev, etc. Un écran sans réglage garde la valeur générale `WEB_GRIDCOLS` (⚙).",
+ "date": "2026-10-18T12:49:53+0200",
+ "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.128/ad-cockpit-v0.128.tgz",
+ "sha256": "aad4d4d0d468450dfca29a19356931547210b2b1692caa98467d95abdda4ed39",
+ "size": 1020325,
+ "notes": "## v0.128 — HUD en bas à droite et menu principal (comme sur Hyprland)\n- Le menu ⋯ quitte l'en-tête : **boutons ronds en bas à droite** — **⋯ Menu principal** (épinglés, filtre, écrans, détail système, profil, tout actualiser, widgets, édition, réglages, mode avancé, **thème clair/sombre, fond d'écran suivant, mettre à jour le cockpit, relancer le cockpit web**), **▦** écran suivant (clic droit : précédent), **🖼** fond d'écran, **🌗** thème, **⚙** réglages, **🎙** Jarvis. Le menu s'ouvre au-dessus des boutons, Ctrl+Espace l'ouvre toujours, `/` filtre.",
  "platforms": [
   "linux-native",
   "linux-web",
@@ -14,14 +14,14 @@
   "windows-app"
  ],
  "mac": {
-  "version": "0.127",
+  "version": "0.128",
   "build": "mac/build.sh --install (source dans l'archive)"
  },
  "windows": {
   "version": "0.3.3",
-  "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.127/ad-cockpit-win-v0.3.3.zip",
-  "sha256": "d7aced712944885c5dc5ab70a4d6cd1dd7509077a98f9c7bd2e7fef0f683511e",
-  "size": 755059,
-  "notes": "## v0.127 — Colonnes propres à chaque écran\n- Le nombre de colonnes (mode édition) est maintenant **mémorisé par écran** (`WEB_GRIDCOLS_BY`) : 5 colonnes sur le Tableau n'affectent plus ✓ Tâches, ⌨ Dev, etc. Un écran sans réglage garde la valeur générale `WEB_GRIDCOLS` (⚙)."
+  "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.128/ad-cockpit-win-v0.3.3.zip",
+  "sha256": "76502771e0d3f584886532c5959d084717e2583285b68430a5ed7ce3f438daac",
+  "size": 756060,
+  "notes": "## v0.128 — HUD en bas à droite et menu principal (comme sur Hyprland)\n- Le menu ⋯ quitte l'en-tête : **boutons ronds en bas à droite** — **⋯ Menu principal** (épinglés, filtre, écrans, détail système, profil, tout actualiser, widgets, édition, réglages, mode avancé, **thème clair/sombre, fond d'écran suivant, mettre à jour le cockpit, relancer le cockpit web**), **▦** écran suivant (clic droit : précédent), **🖼** fond d'écran, **🌗** thème, **⚙** réglages, **🎙** Jarvis. Le menu s'ouvre au-dessus des boutons, Ctrl+Espace l'ouvre toujours, `/` filtre."
  }
 }
