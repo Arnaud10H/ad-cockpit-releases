@@ -1,11 +1,11 @@
 {
- "version": "0.121",
+ "version": "0.122",
  "channel": "stable",
- "date": "2026-10-18T10:26:22+0200",
- "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.121/ad-cockpit-v0.121.tgz",
- "sha256": "816a33a49e5814aea0c1320bbc379c8bd450cdbb5f81f914a4c756570e0b6e53",
- "size": 998714,
- "notes": "## v0.121 — Web à fond : transparence, widgets à la carte, mises à jour Mac automatiques\n- **Mode transparent** du cockpit web (⚙ Apparence → Fond transparent : auto / toujours / jamais ; opacité des cartes) : cartes « verre » floutées sur le fond système.\n- **🧩 Widgets…** directement dans le menu ⋯ (afficher / masquer n'importe quel widget sans passer par l'édition) ; au survol de l'entête d'une carte, 🚫 masquer et 👁 visibilité restent accessibles hors édition.\n- **Mac** : vérification quotidienne des mises à jour (launchd, 04:30 + après connexion, selon `AUTO_UPDATE` off/notify/install, comme le timer Linux) ; l'appli surveille le canal toutes les 6 h → icône « AD ⬆ », notification, « ⬆ Installer la vX » (⌘U) dans le menu.\n- Champs numériques des réglages acceptent les décimales.",
+ "date": "2026-10-18T10:33:12+0200",
+ "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.122/ad-cockpit-v0.122.tgz",
+ "sha256": "fa620b6cf9f516ab017411dbad40b35d8ab2cd9f34e7115a2fbf5ba80c7fe1f0",
+ "size": 1004467,
+ "notes": "## v0.122 — Kanban web, Média, batterie / GPU / réseau\n- **Kanban dans le web** : carte Google Tasks ou Planner en largeur ≥ 2 → listes / buckets en **colonnes**, **glisser-déposer** d'une tâche vers une autre liste ou colonne (`google.py move`, `msgraph.py move-planner`), **＋ ajout rapide** dans chaque colonne (Entrée pour créer, Échap pour annuler). Validé de bout en bout (ajout → déplacement → suppression).\n- **Carte 🎵 Média** (`web-cockpit/media.py`) : titre / artiste / lecteur en cours + ⏮ ⏯ ⏭ — Linux (playerctl), Mac (nowplaying-cli ou Music / Spotify via AppleScript), Windows (contrôles média système SMTC via PowerShell).\n- **Système** : batterie (% + temps restant, Linux / Mac / Windows), GPU (NVIDIA partout via nvidia-smi, nom sur Mac), **débits réseau** ▼▲, températures hwmon (Linux) dans la carte Système du web.",
  "platforms": [
   "linux-native",
   "linux-web",
@@ -14,14 +14,14 @@
   "windows-app"
  ],
  "mac": {
-  "version": "0.121",
+  "version": "0.122",
   "build": "mac/build.sh --install (source dans l'archive)"
  },
  "windows": {
   "version": "0.3.1",
-  "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.121/ad-cockpit-win-v0.3.1.zip",
-  "sha256": "35bac99c6f0e529e9378d498c3e3e9381e61edb8844fbe67e0ec6ad642928fd1",
-  "size": 734642,
-  "notes": "## v0.121 — Web à fond : transparence, widgets à la carte, mises à jour Mac automatiques\n- **Mode transparent** du cockpit web (⚙ Apparence → Fond transparent : auto / toujours / jamais ; opacité des cartes) : cartes « verre » floutées sur le fond système.\n- **🧩 Widgets…** directement dans le menu ⋯ (afficher / masquer n'importe quel widget sans passer par l'édition) ; au survol de l'entête d'une carte, 🚫 masquer et 👁 visibilité restent accessibles hors édition.\n- **Mac** : vérification quotidienne des mises à jour (launchd, 04:30 + après connexion, selon `AUTO_UPDATE` off/notify/install, comme le timer Linux) ; l'appli surveille le canal toutes les 6 h → icône « AD ⬆ », notification, « ⬆ Installer la vX » (⌘U) dans le menu.\n- Champs numériques des réglages acceptent les décimales."
+  "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.122/ad-cockpit-win-v0.3.1.zip",
+  "sha256": "6773629389a0820af3b3ac76c0ea8eb57a591dae7c317fc740872e020fd76c6b",
+  "size": 741532,
+  "notes": "## v0.122 — Kanban web, Média, batterie / GPU / réseau\n- **Kanban dans le web** : carte Google Tasks ou Planner en largeur ≥ 2 → listes / buckets en **colonnes**, **glisser-déposer** d'une tâche vers une autre liste ou colonne (`google.py move`, `msgraph.py move-planner`), **＋ ajout rapide** dans chaque colonne (Entrée pour créer, Échap pour annuler). Validé de bout en bout (ajout → déplacement → suppression).\n- **Carte 🎵 Média** (`web-cockpit/media.py`) : titre / artiste / lecteur en cours + ⏮ ⏯ ⏭ — Linux (playerctl), Mac (nowplaying-cli ou Music / Spotify via AppleScript), Windows (contrôles média système SMTC via PowerShell).\n- **Système** : batterie (% + temps restant, Linux / Mac / Windows), GPU (NVIDIA partout via nvidia-smi, nom sur Mac), **débits réseau** ▼▲, températures hwmon (Linux) dans la carte Système du web."
  }
 }
