@@ -1,11 +1,11 @@
 {
- "version": "0.128",
+ "version": "0.129",
  "channel": "beta",
- "date": "2026-10-18T12:51:40+0200",
- "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.128/ad-cockpit-v0.128.tgz",
- "sha256": "7f70c82551cb354b93daa75c243e1fa539c3af1397407cfd529386e2f925e9f8",
- "size": 1020323,
- "notes": "## v0.128 — HUD en bas à droite et menu principal (comme sur Hyprland)\n- Le menu ⋯ quitte l'en-tête : **boutons ronds en bas à droite** — **⋯ Menu principal** (épinglés, filtre, écrans, détail système, profil, tout actualiser, widgets, édition, réglages, mode avancé, **thème clair/sombre, fond d'écran suivant, mettre à jour le cockpit, relancer le cockpit web**), **▦** écran suivant (clic droit : précédent), **🖼** fond d'écran, **🌗** thème, **⚙** réglages, **🎙** Jarvis. Le menu s'ouvre au-dessus des boutons, Ctrl+Espace l'ouvre toujours, `/` filtre.",
+ "date": "2026-10-19T18:09:18+0200",
+ "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.129/ad-cockpit-v0.129.tgz",
+ "sha256": "9bcd74c6f7b9ccf738bfdee79b12c01880458c825b6657c3300fdc69e2d8be91",
+ "size": 1028330,
+ "notes": "## v0.129 — Mac : Tubely / Musique / Clips en vue native, connexion Google qui tient, disposition qui ne se perd plus\n- **Client Mac : cartes 🌐 Tubely (▶ Tubely, 🎵 Musique, 🎬 Clips) rendues par une vue web native** posée sur la carte (cookies de première partie persistants, plein écran dans la vue, lecture auto) au lieu d'une iframe que WebKit/Google refusaient. Option « Vue native » sur toute carte 🌐. Les boutons ronds du HUD restent visibles par-dessus (encoche corrigée).\n- **Connexion Google de Tubely depuis le Mac** : « Continuer avec Google » ouvre le navigateur par défaut ; la vue récupère ensuite la session **directement auprès de Tubely** (`/auth/handoff-poll`, jeton à usage unique, 3 min) — plus d'appel navigateur → localhost (Chrome bloquait / demandait l'accès au réseau local). L'attente survit à un changement d'écran. Linux garde le relais par `127.0.0.1:8799` (désormais par navigation, plus par fetch).\n- **Correctif : disposition perdue / cartes Planner, To Do, agenda disparues** — deux enregistrements simultanés de la config (disposition + écran) s'écrasaient dans le serveur multi-thread : verrou sur `save_cfg`, fichier temporaire unique, et changement d'écran envoyé en une seule requête.\n- Mac : commandes de diagnostic à distance (`~/.config/ad-cockpit/dev-cmd` : `js …`, `native …`, `snap <png>` avec les vues natives).",
  "platforms": [
   "linux-native",
   "linux-web",
@@ -14,14 +14,14 @@
   "windows-app"
  ],
  "mac": {
-  "version": "0.128",
+  "version": "0.129",
   "build": "mac/build.sh --install (source dans l'archive)"
  },
  "windows": {
   "version": "0.3.3",
-  "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.128/ad-cockpit-win-v0.3.3.zip",
-  "sha256": "27a2f4c18b1d80604f6f41f73f7dfb9bc209c0bb49a9db8a1430f24917b924b2",
-  "size": 756053,
-  "notes": "## v0.128 — HUD en bas à droite et menu principal (comme sur Hyprland)\n- Le menu ⋯ quitte l'en-tête : **boutons ronds en bas à droite** — **⋯ Menu principal** (épinglés, filtre, écrans, détail système, profil, tout actualiser, widgets, édition, réglages, mode avancé, **thème clair/sombre, fond d'écran suivant, mettre à jour le cockpit, relancer le cockpit web**), **▦** écran suivant (clic droit : précédent), **🖼** fond d'écran, **🌗** thème, **⚙** réglages, **🎙** Jarvis. Le menu s'ouvre au-dessus des boutons, Ctrl+Espace l'ouvre toujours, `/` filtre."
+  "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.129/ad-cockpit-win-v0.3.3.zip",
+  "sha256": "e0adb062f686d4766ce429da1997ad2eac9e29922ac8c7867584f960c9e141ed",
+  "size": 758069,
+  "notes": "## v0.129 — Mac : Tubely / Musique / Clips en vue native, connexion Google qui tient, disposition qui ne se perd plus\n- **Client Mac : cartes 🌐 Tubely (▶ Tubely, 🎵 Musique, 🎬 Clips) rendues par une vue web native** posée sur la carte (cookies de première partie persistants, plein écran dans la vue, lecture auto) au lieu d'une iframe que WebKit/Google refusaient. Option « Vue native » sur toute carte 🌐. Les boutons ronds du HUD restent visibles par-dessus (encoche corrigée).\n- **Connexion Google de Tubely depuis le Mac** : « Continuer avec Google » ouvre le navigateur par défaut ; la vue récupère ensuite la session **directement auprès de Tubely** (`/auth/handoff-poll`, jeton à usage unique, 3 min) — plus d'appel navigateur → localhost (Chrome bloquait / demandait l'accès au réseau local). L'attente survit à un changement d'écran. Linux garde le relais par `127.0.0.1:8799` (désormais par navigation, plus par fetch).\n- **Correctif : disposition perdue / cartes Planner, To Do, agenda disparues** — deux enregistrements simultanés de la config (disposition + écran) s'écrasaient dans le serveur multi-thread : verrou sur `save_cfg`, fichier temporaire unique, et changement d'écran envoyé en une seule requête.\n- Mac : commandes de diagnostic à distance (`~/.config/ad-cockpit/dev-cmd` : `js …`, `native …`, `snap <png>` avec les vues natives)."
  }
 }
