@@ -1,11 +1,11 @@
 {
- "version": "0.129",
+ "version": "0.130",
  "channel": "beta",
- "date": "2026-10-19T18:09:18+0200",
- "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.129/ad-cockpit-v0.129.tgz",
- "sha256": "9bcd74c6f7b9ccf738bfdee79b12c01880458c825b6657c3300fdc69e2d8be91",
- "size": 1028330,
- "notes": "## v0.129 — Mac : Tubely / Musique / Clips en vue native, connexion Google qui tient, disposition qui ne se perd plus\n- **Client Mac : cartes 🌐 Tubely (▶ Tubely, 🎵 Musique, 🎬 Clips) rendues par une vue web native** posée sur la carte (cookies de première partie persistants, plein écran dans la vue, lecture auto) au lieu d'une iframe que WebKit/Google refusaient. Option « Vue native » sur toute carte 🌐. Les boutons ronds du HUD restent visibles par-dessus (encoche corrigée).\n- **Connexion Google de Tubely depuis le Mac** : « Continuer avec Google » ouvre le navigateur par défaut ; la vue récupère ensuite la session **directement auprès de Tubely** (`/auth/handoff-poll`, jeton à usage unique, 3 min) — plus d'appel navigateur → localhost (Chrome bloquait / demandait l'accès au réseau local). L'attente survit à un changement d'écran. Linux garde le relais par `127.0.0.1:8799` (désormais par navigation, plus par fetch).\n- **Correctif : disposition perdue / cartes Planner, To Do, agenda disparues** — deux enregistrements simultanés de la config (disposition + écran) s'écrasaient dans le serveur multi-thread : verrou sur `save_cfg`, fichier temporaire unique, et changement d'écran envoyé en une seule requête.\n- Mac : commandes de diagnostic à distance (`~/.config/ad-cockpit/dev-cmd` : `js …`, `native …`, `snap <png>` avec les vues natives).",
+ "date": "2026-10-30T13:33:01+0100",
+ "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.130/ad-cockpit-v0.130.tgz",
+ "sha256": "f997b0f6e1d72ed66940396004481a8aa47aae3db8cbb13e5255418a31bc3158",
+ "size": 1029128,
+ "notes": "## v0.130 — Vue centrale 🔄 Synchy (à la place de 🪟 Windows)\n- Tiroir ▦ du HUD : **🔄 Synchy** prend la place de 🪟 Windows (synchro seedbox, miroir Lyon ⇄ Reims, médiathèque, postes — `http://localhost:8484/`, réglable dans ⚙ Vues → `SYNCHY_URL`). Une vue « windows » mémorisée (par défaut ou par écran) bascule sur Synchy.\n- 🪟 Windows (Dockur) reste accessible par le bouton 🪟 du HUD et `ags request -i ad-cockpit view windows`.\n- Web / Mac / Windows : écran **🔄 Synchy** dans le sélecteur ; Jarvis comprend « vue Synchy ».",
  "platforms": [
   "linux-native",
   "linux-web",
@@ -14,14 +14,14 @@
   "windows-app"
  ],
  "mac": {
-  "version": "0.129",
+  "version": "0.130",
   "build": "mac/build.sh --install (source dans l'archive)"
  },
  "windows": {
   "version": "0.3.3",
-  "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.129/ad-cockpit-win-v0.3.3.zip",
-  "sha256": "e0adb062f686d4766ce429da1997ad2eac9e29922ac8c7867584f960c9e141ed",
-  "size": 758069,
-  "notes": "## v0.129 — Mac : Tubely / Musique / Clips en vue native, connexion Google qui tient, disposition qui ne se perd plus\n- **Client Mac : cartes 🌐 Tubely (▶ Tubely, 🎵 Musique, 🎬 Clips) rendues par une vue web native** posée sur la carte (cookies de première partie persistants, plein écran dans la vue, lecture auto) au lieu d'une iframe que WebKit/Google refusaient. Option « Vue native » sur toute carte 🌐. Les boutons ronds du HUD restent visibles par-dessus (encoche corrigée).\n- **Connexion Google de Tubely depuis le Mac** : « Continuer avec Google » ouvre le navigateur par défaut ; la vue récupère ensuite la session **directement auprès de Tubely** (`/auth/handoff-poll`, jeton à usage unique, 3 min) — plus d'appel navigateur → localhost (Chrome bloquait / demandait l'accès au réseau local). L'attente survit à un changement d'écran. Linux garde le relais par `127.0.0.1:8799` (désormais par navigation, plus par fetch).\n- **Correctif : disposition perdue / cartes Planner, To Do, agenda disparues** — deux enregistrements simultanés de la config (disposition + écran) s'écrasaient dans le serveur multi-thread : verrou sur `save_cfg`, fichier temporaire unique, et changement d'écran envoyé en une seule requête.\n- Mac : commandes de diagnostic à distance (`~/.config/ad-cockpit/dev-cmd` : `js …`, `native …`, `snap <png>` avec les vues natives)."
+  "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.130/ad-cockpit-win-v0.3.3.zip",
+  "sha256": "62106447147f974f5f31e2ba0d3c3d77046c697f29e9ea6049a25e40e00b3521",
+  "size": 758394,
+  "notes": "## v0.130 — Vue centrale 🔄 Synchy (à la place de 🪟 Windows)\n- Tiroir ▦ du HUD : **🔄 Synchy** prend la place de 🪟 Windows (synchro seedbox, miroir Lyon ⇄ Reims, médiathèque, postes — `http://localhost:8484/`, réglable dans ⚙ Vues → `SYNCHY_URL`). Une vue « windows » mémorisée (par défaut ou par écran) bascule sur Synchy.\n- 🪟 Windows (Dockur) reste accessible par le bouton 🪟 du HUD et `ags request -i ad-cockpit view windows`.\n- Web / Mac / Windows : écran **🔄 Synchy** dans le sélecteur ; Jarvis comprend « vue Synchy »."
  }
 }
