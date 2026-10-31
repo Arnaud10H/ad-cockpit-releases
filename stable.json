@@ -1,11 +1,11 @@
 {
- "version": "0.131",
+ "version": "0.132",
  "channel": "stable",
- "date": "2026-10-31T04:19:38+0100",
- "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.131/ad-cockpit-v0.131.tgz",
- "sha256": "eebe4db298ce06843a6dd4cc92f0870b2fbad13beeda9f8f9265b6ae8c161cf4",
- "size": 1032512,
- "notes": "## v0.131 — Mac : look « modulaire » façon Hyprland, masquer le cockpit, plein écran stable\n- **Panneaux flottants** (⚙ `WEB_MODULAR`, actif par défaut sur le client Mac) : plus de voile flouté plein écran — chaque panneau (barre du haut, cartes, menu, HUD) reçoit sa propre plaque de verre native (NSVisualEffectView arrondie posée derrière), le papier peint reste net entre les panneaux. Barre du haut flottante et plus fine, cartes sans ombre ni effet 3D, contrôles des cartes visibles au survol seulement, opacité des cartes réglable (`WEB_CARD_ALPHA`, 0.42 sur le Mac).\n- **Masquer le cockpit** : ⌃⌥H, bouton ⏻ du HUD, menu ⋯ ou menu AD → tout disparaît, il reste une pastille ⏻ en bas à droite pour revenir (la musique continue).\n- **Plein écran stable** : la vue Tubely n'est plus recréée au moindre re-rendu de la page (masquée puis détruite seulement après 20 s d'absence), repositionnée seulement si elle bouge, plus d'effet de survol qui déplace les cartes, plein écran système désactivé (Tubely garde son plein écran dans la vue).\n- **Écrans plein cadre** (Musique, Clips, Tubely, Synchy, App) : carte nue sans titre ni barre d'adresse (⟳ ↗ au survol), qui occupe toute la hauteur.\n- Multi-écrans : le lecteur natif ne tourne que sur l'écran principal (avant : un Tubely par écran, donc la musique en triple).",
+ "date": "2026-10-31T04:35:23+0100",
+ "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.132/ad-cockpit-v0.132.tgz",
+ "sha256": "579b09aa749e1265c84b06f12eefec2907f49b98a7c3935b1e6b34b3557272c8",
+ "size": 1037864,
+ "notes": "## v0.132 — Prêt à offrir : installation « grand public », comptes en un clic, vue 🎯 Prospection\n- **Vue 🎯 Prospection** (radar.artisan-digital.eu/alerts) : vue centrale native (tiroir ▦, 3e rangée), écran web/Mac (vue native : la connexion est mémorisée), ⚙ `RADAR_URL`, Jarvis « vue prospection ».\n- **Installation chez quelqu'un d'autre** (`WEB_SIMPLE`, actif hors postes d'Arnaud) : tableau simple d'emblée — Bienvenue, météo, horloges, agenda, tâches, to-do, notes, média, contrôles, minuteur, icônes ; les cartes techniques (Docker, Git, préprod, Dockur, Deck, Planner…) restent dans la galerie ; écrans perso (Synchy, Prospection, Doublons, Dev, App) masqués (réactivables dans ▦ Écrans).\n- **Carte 👋 Bienvenue** : connecter Google et Microsoft, choisir les écrans, ouvrir la galerie, raccourcis — sans terminal.\n- **Comptes en un clic** (`/api/connect`) : Microsoft par code (affiché en grand, copié, page ouverte, la fenêtre se ferme seule une fois connecté) ; Google : dépôt du fichier client JSON (`/api/google-client`) puis page Google. Partout, « client manquant / non authentifié » devient un bouton **Connecter**.\n- Jetons rangés dans `~/.config/ad-cockpit/secrets` sur une installation neuve.\n- `docs/INSTALL-MAC.md` : guide d'installation (2 commandes) et de prise en main.\n- Corrigé : styles perdus du menu ▦ Écrans (mode édition) et de la carte Jarvis.",
  "platforms": [
   "linux-native",
   "linux-web",
@@ -14,14 +14,14 @@
   "windows-app"
  ],
  "mac": {
-  "version": "0.131",
+  "version": "0.132",
   "build": "mac/build.sh --install (source dans l'archive)"
  },
  "windows": {
   "version": "0.3.3",
-  "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.131/ad-cockpit-win-v0.3.3.zip",
-  "sha256": "b7e78cec683cdd2c78dd806054f27f536f53de2cd26c6de3d35e3dc4b29a63a7",
-  "size": 760371,
-  "notes": "## v0.131 — Mac : look « modulaire » façon Hyprland, masquer le cockpit, plein écran stable\n- **Panneaux flottants** (⚙ `WEB_MODULAR`, actif par défaut sur le client Mac) : plus de voile flouté plein écran — chaque panneau (barre du haut, cartes, menu, HUD) reçoit sa propre plaque de verre native (NSVisualEffectView arrondie posée derrière), le papier peint reste net entre les panneaux. Barre du haut flottante et plus fine, cartes sans ombre ni effet 3D, contrôles des cartes visibles au survol seulement, opacité des cartes réglable (`WEB_CARD_ALPHA`, 0.42 sur le Mac).\n- **Masquer le cockpit** : ⌃⌥H, bouton ⏻ du HUD, menu ⋯ ou menu AD → tout disparaît, il reste une pastille ⏻ en bas à droite pour revenir (la musique continue).\n- **Plein écran stable** : la vue Tubely n'est plus recréée au moindre re-rendu de la page (masquée puis détruite seulement après 20 s d'absence), repositionnée seulement si elle bouge, plus d'effet de survol qui déplace les cartes, plein écran système désactivé (Tubely garde son plein écran dans la vue).\n- **Écrans plein cadre** (Musique, Clips, Tubely, Synchy, App) : carte nue sans titre ni barre d'adresse (⟳ ↗ au survol), qui occupe toute la hauteur.\n- Multi-écrans : le lecteur natif ne tourne que sur l'écran principal (avant : un Tubely par écran, donc la musique en triple)."
+  "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.132/ad-cockpit-win-v0.3.3.zip",
+  "sha256": "40575b4958bf7ea09e24eee3287ea01ca69b4ff3fd7c6ebd5792782b6b936f60",
+  "size": 764979,
+  "notes": "## v0.132 — Prêt à offrir : installation « grand public », comptes en un clic, vue 🎯 Prospection\n- **Vue 🎯 Prospection** (radar.artisan-digital.eu/alerts) : vue centrale native (tiroir ▦, 3e rangée), écran web/Mac (vue native : la connexion est mémorisée), ⚙ `RADAR_URL`, Jarvis « vue prospection ».\n- **Installation chez quelqu'un d'autre** (`WEB_SIMPLE`, actif hors postes d'Arnaud) : tableau simple d'emblée — Bienvenue, météo, horloges, agenda, tâches, to-do, notes, média, contrôles, minuteur, icônes ; les cartes techniques (Docker, Git, préprod, Dockur, Deck, Planner…) restent dans la galerie ; écrans perso (Synchy, Prospection, Doublons, Dev, App) masqués (réactivables dans ▦ Écrans).\n- **Carte 👋 Bienvenue** : connecter Google et Microsoft, choisir les écrans, ouvrir la galerie, raccourcis — sans terminal.\n- **Comptes en un clic** (`/api/connect`) : Microsoft par code (affiché en grand, copié, page ouverte, la fenêtre se ferme seule une fois connecté) ; Google : dépôt du fichier client JSON (`/api/google-client`) puis page Google. Partout, « client manquant / non authentifié » devient un bouton **Connecter**.\n- Jetons rangés dans `~/.config/ad-cockpit/secrets` sur une installation neuve.\n- `docs/INSTALL-MAC.md` : guide d'installation (2 commandes) et de prise en main.\n- Corrigé : styles perdus du menu ▦ Écrans (mode édition) et de la carte Jarvis."
  }
 }
