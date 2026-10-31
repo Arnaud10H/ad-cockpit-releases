@@ -1,11 +1,11 @@
 {
- "version": "0.130",
+ "version": "0.131",
  "channel": "beta",
- "date": "2026-10-30T13:33:01+0100",
- "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.130/ad-cockpit-v0.130.tgz",
- "sha256": "f997b0f6e1d72ed66940396004481a8aa47aae3db8cbb13e5255418a31bc3158",
- "size": 1029128,
- "notes": "## v0.130 — Vue centrale 🔄 Synchy (à la place de 🪟 Windows)\n- Tiroir ▦ du HUD : **🔄 Synchy** prend la place de 🪟 Windows (synchro seedbox, miroir Lyon ⇄ Reims, médiathèque, postes — `http://localhost:8484/`, réglable dans ⚙ Vues → `SYNCHY_URL`). Une vue « windows » mémorisée (par défaut ou par écran) bascule sur Synchy.\n- 🪟 Windows (Dockur) reste accessible par le bouton 🪟 du HUD et `ags request -i ad-cockpit view windows`.\n- Web / Mac / Windows : écran **🔄 Synchy** dans le sélecteur ; Jarvis comprend « vue Synchy ».",
+ "date": "2026-10-31T04:19:18+0100",
+ "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.131/ad-cockpit-v0.131.tgz",
+ "sha256": "eebe4db298ce06843a6dd4cc92f0870b2fbad13beeda9f8f9265b6ae8c161cf4",
+ "size": 1032512,
+ "notes": "## v0.131 — Mac : look « modulaire » façon Hyprland, masquer le cockpit, plein écran stable\n- **Panneaux flottants** (⚙ `WEB_MODULAR`, actif par défaut sur le client Mac) : plus de voile flouté plein écran — chaque panneau (barre du haut, cartes, menu, HUD) reçoit sa propre plaque de verre native (NSVisualEffectView arrondie posée derrière), le papier peint reste net entre les panneaux. Barre du haut flottante et plus fine, cartes sans ombre ni effet 3D, contrôles des cartes visibles au survol seulement, opacité des cartes réglable (`WEB_CARD_ALPHA`, 0.42 sur le Mac).\n- **Masquer le cockpit** : ⌃⌥H, bouton ⏻ du HUD, menu ⋯ ou menu AD → tout disparaît, il reste une pastille ⏻ en bas à droite pour revenir (la musique continue).\n- **Plein écran stable** : la vue Tubely n'est plus recréée au moindre re-rendu de la page (masquée puis détruite seulement après 20 s d'absence), repositionnée seulement si elle bouge, plus d'effet de survol qui déplace les cartes, plein écran système désactivé (Tubely garde son plein écran dans la vue).\n- **Écrans plein cadre** (Musique, Clips, Tubely, Synchy, App) : carte nue sans titre ni barre d'adresse (⟳ ↗ au survol), qui occupe toute la hauteur.\n- Multi-écrans : le lecteur natif ne tourne que sur l'écran principal (avant : un Tubely par écran, donc la musique en triple).",
  "platforms": [
   "linux-native",
   "linux-web",
@@ -14,14 +14,14 @@
   "windows-app"
  ],
  "mac": {
-  "version": "0.130",
+  "version": "0.131",
   "build": "mac/build.sh --install (source dans l'archive)"
  },
  "windows": {
   "version": "0.3.3",
-  "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.130/ad-cockpit-win-v0.3.3.zip",
-  "sha256": "62106447147f974f5f31e2ba0d3c3d77046c697f29e9ea6049a25e40e00b3521",
-  "size": 758394,
-  "notes": "## v0.130 — Vue centrale 🔄 Synchy (à la place de 🪟 Windows)\n- Tiroir ▦ du HUD : **🔄 Synchy** prend la place de 🪟 Windows (synchro seedbox, miroir Lyon ⇄ Reims, médiathèque, postes — `http://localhost:8484/`, réglable dans ⚙ Vues → `SYNCHY_URL`). Une vue « windows » mémorisée (par défaut ou par écran) bascule sur Synchy.\n- 🪟 Windows (Dockur) reste accessible par le bouton 🪟 du HUD et `ags request -i ad-cockpit view windows`.\n- Web / Mac / Windows : écran **🔄 Synchy** dans le sélecteur ; Jarvis comprend « vue Synchy »."
+  "url": "https://github.com/Arnaud10H/ad-cockpit-releases/releases/download/v0.131/ad-cockpit-win-v0.3.3.zip",
+  "sha256": "9afe4e5530781246d4d0c97146f69b4e34187046cc3f6bf9d215e3313649b10b",
+  "size": 760371,
+  "notes": "## v0.131 — Mac : look « modulaire » façon Hyprland, masquer le cockpit, plein écran stable\n- **Panneaux flottants** (⚙ `WEB_MODULAR`, actif par défaut sur le client Mac) : plus de voile flouté plein écran — chaque panneau (barre du haut, cartes, menu, HUD) reçoit sa propre plaque de verre native (NSVisualEffectView arrondie posée derrière), le papier peint reste net entre les panneaux. Barre du haut flottante et plus fine, cartes sans ombre ni effet 3D, contrôles des cartes visibles au survol seulement, opacité des cartes réglable (`WEB_CARD_ALPHA`, 0.42 sur le Mac).\n- **Masquer le cockpit** : ⌃⌥H, bouton ⏻ du HUD, menu ⋯ ou menu AD → tout disparaît, il reste une pastille ⏻ en bas à droite pour revenir (la musique continue).\n- **Plein écran stable** : la vue Tubely n'est plus recréée au moindre re-rendu de la page (masquée puis détruite seulement après 20 s d'absence), repositionnée seulement si elle bouge, plus d'effet de survol qui déplace les cartes, plein écran système désactivé (Tubely garde son plein écran dans la vue).\n- **Écrans plein cadre** (Musique, Clips, Tubely, Synchy, App) : carte nue sans titre ni barre d'adresse (⟳ ↗ au survol), qui occupe toute la hauteur.\n- Multi-écrans : le lecteur natif ne tourne que sur l'écran principal (avant : un Tubely par écran, donc la musique en triple)."
  }
 }
